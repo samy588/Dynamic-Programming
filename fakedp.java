@@ -12,11 +12,11 @@ public class Subset_sum {
 		boolean subset[][] = new boolean[2][sum + 1];
 	
 		for (int i = 0; i <= n; i++) {
-			for (int j = 0; j < sum; j++) {
-	
+			for (int j = 0; j <= sum; j++) {
+			//You made two channges in your code I have fixed them in this PR
 				// A subset with sum 0 is always possible
 				if (j == 0)
-					subset[i / 2][j] = true;
+					subset[i % 2][j] = true;
 	
 				// If there exists no element no sum
 				// is possible
